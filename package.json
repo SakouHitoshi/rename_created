@@ -1,0 +1,31 @@
+{
+  "name": "rename_created",
+  "version": "1.0.0",
+  "description": "Rename photos and videos to the creation date.",
+  "main": "main.js",
+  "bin": {
+    "rename_created": "./main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SakouHitoshi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SakouHitoshi/rename_created.git"
+  },
+  "keywords": [
+    "photo",
+    "movie",
+    "rename",
+    "file"
+  ],
+  "bugs": {
+    "url": "https://github.com/SakouHitoshi/rename_created/issues"
+  },
+  "homepage": "https://github.com/SakouHitoshi/rename_created#readme",
+  "dependencies": {
+    "enquirer": "^2.3.6"
+  }
+}
