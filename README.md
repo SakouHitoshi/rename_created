@@ -11,6 +11,9 @@ Rename photos and videos to the creation date.
 $ npm install -g rename_created
 ```
 
+## precautionary statement
+Make sure you copy the directory before conversion just in case.
+
 ## usage
 1. Specify the directory where the files you want to convert are located
 ```
