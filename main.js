@@ -50,7 +50,7 @@ async function main() {
   someSerialNumFullPathAndNewFullPath.forEach((file, index) => {
     console.log(file.fullPath.match(/([^/]+?)?$/)[1] + "  -->  " + file.newFullPath.match(/([^/]+?)?$/)[1])
   })
-
+  console.log(`項目数:${someSerialNumFullPathAndNewFullPath.length}`)
   const {Confirm} = require('enquirer');
 
   const prompt = new Confirm({
