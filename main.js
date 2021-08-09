@@ -57,7 +57,7 @@ async function main() {
 
   const prompt = new Confirm({
     name: 'question',
-    message: '写真を変換しますか？'
+    message: 'ファイルをリネームしますか？'
   });
 
   try {
@@ -68,7 +68,7 @@ async function main() {
           if (err) throw err
         })
       })
-      console.log('変換しました！')
+      console.log('リネームしました！')
     } else {
       console.log('キャンセルしました。')
     }
