@@ -6,6 +6,10 @@ const dirPath = process.argv[2]
 const newDirPath = dirPath.endsWith("/") ? dirPath : dirPath + "/"
 const fileNames = fs.readdirSync(newDirPath)
 
+const red     = '\u001b[31m';
+const blue    = '\u001b[34m';
+const reset   = '\u001b[0m';
+
 const targetFileNames = fileNames.filter(RegExp.prototype.test, /.*\.jpg$|\.JPG$|\.jpeg$|\.JPEG$|\.png$|\.PNG$|\.AAE$|\.gif$|\.tif$|\.tiff$|\.HEIC$|\.MOV$|\.mov$|\.MPEG$|\.mpeg$|\.mpg$|\.MP4$|\.mp4$|\.AVI$|\.avi$|\.wmv$|\.flv$|\.mkv$/)
 
 const fullPathAndNewFullPath = targetFileNames.map((fileName) => {
@@ -49,9 +53,9 @@ const someSerialNumFullPathAndNewFullPath = fullPathAndNewFullPath.map((file, i,
 
 async function main() {
   someSerialNumFullPathAndNewFullPath.forEach((file) => {
-    console.log(file.fullPath.match(/([^/]+?)?$/)[1] + "  -->  " + file.newFullPath.match(/([^/]+?)?$/)[1])
+    console.log(file.fullPath.match(/([^/]+?)?$/)[1] + "  -->  " + blue + file.newFullPath.match(/([^/]+?)?$/)[1] + reset)
   })
-  console.log(`項目数:${someSerialNumFullPathAndNewFullPath.length}`)
+  console.log(`項目数:${blue}${someSerialNumFullPathAndNewFullPath.length}${reset}`)
 
   const {Confirm} = require('enquirer');
 
@@ -68,9 +72,9 @@ async function main() {
           if (err) throw err
         })
       })
-      console.log('リネームしました！')
+      console.log(blue + 'リネームしました！' + reset)
     } else {
-      console.log('キャンセルしました。')
+      console.log(red + 'キャンセルしました。' + reset)
     }
   } catch (error) {
     console.error(error);
