@@ -1,6 +1,6 @@
 {
   "name": "rename_created",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Rename photos and videos to the creation date.",
   "main": "main.js",
   "bin": {
